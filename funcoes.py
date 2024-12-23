@@ -1,59 +1,59 @@
 import streamlit as st
 
-# Dicionário com bibliotecas e suas principais funções em ordem alfabética
+# Dicionário com bibliotecas e suas funções (prioridade por uso nas funções)
 libraries = {
-    "Listas": sorted([
-        "all()", "any()", "append()", "clear()", "copy()", "count()", "enumerate()", "extend()", "index()", "insert()",
-        "len()", "list()", "max()", "min()", "pop()", "remove()", "reverse()", "slice()", "sort()", "sum()"
-    ]),
-    "Loops": sorted([
-        "break", "continue", "dict comprehension", "else", "enumerate()", "for", "for-else", "infinite loops", "iteration over dictionaries", "iteration over lists",
-        "iteration over strings", "list comprehension", "nested loops", "nested loops with break", "pass", "range()", "set comprehension", "using range with step",
-        "while", "while-else"
-    ]),
-    "Matplotlib": sorted([
-        "annotate()", "bar()", "boxplot()", "figure()", "grid()", "hist()", "legend()", "pie()", "plot()", "savefig()",
-        "scatter()", "show()", "subplot()", "title()", "xlabel()", "xlim()", "xticks()", "ylabel()", "ylim()", "yticks()"
-    ]),
-    "NumPy": sorted([
-        "argmax()", "argmin()", "arange()", "array()", "concatenate()", "dot()", "exp()", "eye()", "full()", "linspace()",
-        "log()", "mean()", "ones()", "random()", "reshape()", "round()", "sqrt()", "sum()", "transpose()", "zeros()"
-    ]),
-    "Pandas": sorted([
-        "DataFrame()", "apply()", "describe()", "drop()", "dropna()", "fillna()", "groupby()", "head()", "iloc[]", "loc[]",
-        "merge()", "pivot_table()", "read_csv()", "read_excel()", "reset_index()", "set_index()", "sort_values()", "tail()", "to_csv()", "to_excel()"
-    ]),
-    "PyAutoGUI": sorted([
-        "PAUSE", "alert()", "click()", "confirm()", "dragRel()", "dragTo()", "hotkey()", "keyDown()", "keyUp()", "locateOnScreen()",
-        "mouseDown()", "mouseUp()", "moveRel()", "moveTo()", "position()", "prompt()", "scroll()", "screenshot()", "size()", "typewrite()"
-    ]),
-    "Python": sorted([
-        "abs()", "all()", "any()", "bin()", "bool()", "callable()", "chr()", "dir()", "divmod()", "enumerate()",
-        "filter()", "float()", "format()", "getattr()", "hasattr()", "hash()", "hex()", "id()", "input()", "int()"
-    ]),
-    "Requests": sorted([
-        "auth()", "content()", "cookies()", "delete()", "get()", "head()", "headers()", "history()", "json()", "options()",
-        "params()", "patch()", "post()", "put()", "raise_for_status()", "session()", "status_code()", "text()", "timeout()", "url()"
-    ]),
-    "Selenium": sorted([
-        "back()", "click()", "close()", "current_url", "execute_script()", "find_element()", "find_elements()", "forward()", "get()", "get_attribute()",
-        "implicitly_wait()", "is_displayed()", "maximize_window()", "page_source", "quit()", "refresh()", "screenshot()", "send_keys()", "switch_to()", "title"
-    ]),
-    "Streamlit": sorted([
-        "st.audio()", "st.button()", "st.checkbox()", "st.columns()", "st.dataframe()", "st.expander()", "st.file_uploader()", "st.form()", "st.image()", "st.markdown()",
-        "st.metric()", "st.progress()", "st.radio()", "st.selectbox()", "st.sidebar()", "st.slider()", "st.table()", "st.text_input()", "st.video()", "st.write()"
-    ]),
-    "yfinance": sorted([
-        "Ticker()", "actions", "balance_sheet", "calendar", "cashflow", "dividends", "download()", "earnings", "history()", "info",
-        "institutional_holders", "major_holders", "options", "quarterly_balance_sheet", "quarterly_cashflow", "quarterly_earnings", "quarterly_financials", "recommendations",
-        "splits", "sustainability"
-    ]),
+    "Listas": [
+        "append()", "pop()", "remove()", "insert()", "sort()", "reverse()", "extend()", "index()", "count()", "clear()",
+        "len()", "max()", "min()", "sum()", "list()", "slice()", "copy()", "enumerate()", "any()", "all()"
+    ],
+    "Loops": [
+        "for", "while", "break", "continue", "range()", "enumerate()", "nested loops", "for-else", "while-else", "list comprehension",
+        "dict comprehension", "set comprehension", "pass", "iteration over lists", "iteration over dictionaries", "iteration over strings",
+        "nested loops with break", "using range with step", "infinite loops", "else"
+    ],
+    "Matplotlib": [
+        "plot()", "scatter()", "bar()", "hist()", "show()", "xlabel()", "ylabel()", "legend()", "title()", "grid()",
+        "savefig()", "xlim()", "ylim()", "figure()", "xticks()", "yticks()", "subplot()", "pie()", "annotate()", "boxplot()"
+    ],
+    "NumPy": [
+        "array()", "reshape()", "linspace()", "arange()", "mean()", "dot()", "sum()", "transpose()", "zeros()", "ones()",
+        "full()", "eye()", "random()", "sqrt()", "log()", "exp()", "argmax()", "argmin()", "concatenate()", "round()"
+    ],
+    "Pandas": [
+        "DataFrame()", "read_csv()", "head()", "tail()", "groupby()", "merge()", "pivot_table()", "iloc[]", "loc[]", "describe()",
+        "fillna()", "dropna()", "drop()", "sort_values()", "reset_index()", "set_index()", "to_csv()", "read_excel()", "to_excel()", "apply()"
+    ],
+    "PyAutoGUI": [
+        "click()", "moveTo()", "dragTo()", "screenshot()", "locateOnScreen()", "typewrite()", "keyDown()", "keyUp()", "hotkey()", "position()",
+        "size()", "mouseDown()", "mouseUp()", "moveRel()", "dragRel()", "scroll()", "prompt()", "alert()", "confirm()", "PAUSE"
+    ],
+    "Python": [
+        "print()", "input()", "len()", "int()", "str()", "float()", "abs()", "all()", "any()", "round()",
+        "enumerate()", "filter()", "map()", "zip()", "sorted()", "range()", "bin()", "hex()", "chr()", "dir()"
+    ],
+    "Requests": [
+        "get()", "post()", "put()", "delete()", "raise_for_status()", "timeout()", "auth()", "json()", "text()", "status_code()",
+        "options()", "patch()", "head()", "session()", "cookies()", "headers()", "params()", "content()", "url()", "history()"
+    ],
+    "Selenium": [
+        "get()", "find_element()", "send_keys()", "click()", "get_attribute()", "is_displayed()", "maximize_window()", "refresh()", "back()", "quit()",
+        "find_elements()", "switch_to()", "execute_script()", "forward()", "implicitly_wait()", "page_source", "title", "current_url", "close()", "screenshot()"
+    ],
+    "Streamlit": [
+        "st.write()", "st.selectbox()", "st.button()", "st.slider()", "st.text_input()", "st.checkbox()", "st.radio()", "st.markdown()", "st.sidebar()", "st.file_uploader()",
+        "st.dataframe()", "st.table()", "st.progress()", "st.image()", "st.video()", "st.audio()", "st.columns()", "st.expander()", "st.form()", "st.metric()"
+    ],
+    "yfinance": [
+        "download()", "Ticker()", "history()", "info", "actions", "dividends", "splits", "cashflow", "balance_sheet", "earnings",
+        "recommendations", "sustainability", "major_holders", "institutional_holders", "quarterly_balance_sheet", "quarterly_cashflow", "quarterly_earnings",
+        "quarterly_financials", "calendar", "options"
+    ],
 }
 
 # Configurações da página
 st.set_page_config(page_title="Consulta de Bibliotecas", layout="wide")
 
-# Barra lateral para seleção da biblioteca
+# Barra lateral para seleção da biblioteca (em ordem alfabética)
 st.sidebar.title("Selecione a Biblioteca")
 selected_library = st.sidebar.selectbox("Biblioteca", options=sorted(libraries.keys()))
 
